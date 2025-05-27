@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="cancel-container">
+    <h2>❌ Payment Cancelled</h2>
+    <p>Your payment was cancelled. You can try again anytime.</p>
+    <a href="/allmovies/" class="home-button">Back to Home</a>
+</div>
+
+<style>
+    .cancel-container {
+        margin: 100px auto;
+        max-width: 600px;
+        text-align: center;
+        padding: 30px;
+        background: #ffebee;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+        color: #c62828;
+        margin-bottom: 20px;
+    }
+    .home-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #b71c1c;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+    }
+    .home-button:hover {
+        background-color: #c62828;
+    }
+</style>
+{% endblock %}

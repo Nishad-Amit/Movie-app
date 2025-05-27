@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="success-container">
+    <h2>🎉 Payment Successful!</h2>
+    <p>Thank you for your booking. Your payment has been processed successfully.</p>
+    <a href="/allmovies/" class="home-button">Back to Home</a>
+</div>
+
+<style>
+    .success-container {
+        margin: 100px auto;
+        max-width: 600px;
+        text-align: center;
+        padding: 30px;
+        background: #e8f5e9;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+        color: #2e7d32;
+        margin-bottom: 20px;
+    }
+    .home-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #388e3c;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+    }
+    .home-button:hover {
+        background-color: #2e7d32;
+    }
+</style>
+{% endblock %}
