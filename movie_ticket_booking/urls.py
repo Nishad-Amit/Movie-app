@@ -18,16 +18,18 @@ from django.contrib import admin
 from django.urls import path , include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.shortcuts import redirect  # ✅ Added import
 
 urlpatterns = [
+    path('', lambda request: redirect('/accounts/home/')),  # ✅ Added this redirect
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
-    path('accounts/',include('allauth.urls')),
+    path('accounts/', include('allauth.urls')),
     path('', include('movies.urls')),
-    path('booking/',include('bookings.urls')),
-    path('payments/',include('payments.urls')),
-    path('reviews/',include('reviews.urls')),
-    path('',include('dashboard.urls')),
+    path('booking/', include('bookings.urls')),
+    path('payments/', include('payments.urls')),
+    path('reviews/', include('reviews.urls')),
+    path('', include('dashboard.urls')),
 ]
 
 if settings.DEBUG:
